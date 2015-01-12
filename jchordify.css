@@ -6,17 +6,24 @@
 	position: relative;
 	float: left;
 }
-.chord-hor.chord-fret1 {
-	border-left: 3px solid #aaa;
-	clear: both;
+.chord-hor.chord-fret-first {
+border-left: 3px solid #aaa;
+clear: both;
+border-right-width: 0;
+border-bottom-width: 0;
 }
-.chord-vert.chord-fret1 {
+.chord-hor.chord-fret-last {
+border-right-width: 1px;
+}
+.chord-vert.chord-fret-first {
 	border-top: 3px solid #aaa;
 	clear: both;
 }
 .chord-hor {
 	border-top-color: #000;
 	border-bottom-color: #000;
+border-right-width: 0;
+border-bottom-width: 0;
 }
 .chord-vert {
 	border-left-color: #000;
