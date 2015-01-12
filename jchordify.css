@@ -1,10 +1,13 @@
+.note-cell,
 .chord-cell {
-  border: 1px solid #ccc;
   width: 12px;
   height: 12px;
   padding: 0;
   position: relative;
   float: left;
+}
+.chord-cell {
+  border: 1px solid #ccc;
 }
 .chord-hor {
   border-top-color: #000;
@@ -16,9 +19,12 @@
   border-left-color: #000;
   border-right-color: #000;
 }
+.note-hor.note-fret-first,
+.chord-hor.chord-fret-first {
+  clear: both;
+}
 .chord-hor.chord-fret-first {
   border-left: 3px solid #aaa;
-  clear: both;
   border-right-width: 0;
   border-bottom-width: 0;
 }
@@ -31,4 +37,7 @@
 .chord-vert.chord-fret-first {
   border-top: 3px solid #aaa;
   clear: both;
+}
+.transparent {
+  border-color: transparent;
 }
