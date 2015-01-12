@@ -24,11 +24,17 @@
     		// console.log(iVert + "/" + iVertLimit+ "; " + iHor + "/" + iHorLimit);
     		var chordCell = $( "<div></div>" ).attr("data-fret", fret).attr("data-string", string)
     			.addClass("chord-cell").addClass("chord-fret-" + fret).addClass("chord-string-" + string).addClass(classOrient);
-    		if (((iVert == 0) && (!settings.isHorizontal)) || ((iHor == 0) && (settings.isHorizontal))) {
-    			chordCell.addClass("chord-fret-first");
-    		}
+        if (((iVert == 0) && (!settings.isHorizontal)) || ((iHor == 0) && (settings.isHorizontal))) {
+          chordCell.addClass("chord-fret-first");
+        }
+        if (((iHor == 0) && (!settings.isHorizontal)) || ((iVert == 0) && (settings.isHorizontal))) {
+          chordCell.addClass("chord-string-first");
+        }
         if (((iVert == iVertLimit-1) && (!settings.isHorizontal)) || ((iHor == iHorLimit-1) && (settings.isHorizontal))) {
           chordCell.addClass("chord-fret-last");
+        }
+        if (((iVert == iVertLimit-1) && (settings.isHorizontal)) || ((iHor == iHorLimit-1) && (!settings.isHorizontal))) {
+          chordCell.addClass("chord-string-last");
         }
     		// var chordCellClone = chordCell.clone();
     		this.append( chordCell );
