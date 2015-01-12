@@ -1,0 +1,24 @@
+.chord-cell {
+	border: 1px solid #ccc;
+	width: 12px;
+	height: 12px;
+	padding: 0;
+	position: relative;
+	float: left;
+}
+.chord-hor.chord-fret1 {
+	border-left: 3px solid #aaa;
+	clear: both;
+}
+.chord-vert.chord-fret1 {
+	border-top: 3px solid #aaa;
+	clear: both;
+}
+.chord-hor {
+	border-top-color: #000;
+	border-bottom-color: #000;
+}
+.chord-vert {
+	border-left-color: #000;
+	border-right-color: #000;
+}
